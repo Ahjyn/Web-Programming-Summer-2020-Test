@@ -1,0 +1,24 @@
+.flex-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    line-height:30px;
+    justify-content: center;
+}
+.flex-item {
+    background: coral;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+
+    height:70px;
+    width:70px
+}
+.flex-item:before {
+    content:'';
+    float:inherit;
+    padding-top:100%;
+}
