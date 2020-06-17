@@ -1,0 +1,35 @@
+
+#app {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    padding: 40px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.computer {
+    width: 100px;
+    height: 100px;
+
+}
+
+.button {
+    margin: 20px;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+.selected {
+    border: 8px red;
+    border-radius: 50%;
+}
