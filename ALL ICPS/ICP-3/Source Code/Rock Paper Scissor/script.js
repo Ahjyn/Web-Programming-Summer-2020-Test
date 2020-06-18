@@ -4,18 +4,18 @@
     const computer = document.querySelector('.computer');
     const output = document.querySelector('.output');
 
-    // The keys contains what the key wins over
+    // These keys contain who wins over what (computer versus you)
     const combinations = {
         rock: 'scissors',
         paper: 'rock',
         scissors: 'paper'
     };
-    // Get keys of object to be able to randomly select one
+    // Randomly selects one key combo
     const keys = Object.keys(combinations);
     const waitTime = 50;
     const scrambleCount = 20;
 
-    // Use promise to wait
+    // Use promise to wait for a decision
     const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
 
     const calculateWinner = (playerChoice, computerChoice) => {
@@ -44,7 +44,7 @@
         buttons.forEach(button => (button.classList = 'button'));
         // Set class on selected button
         e.target.classList = 'button selected';
-        const playerChoice = e.target.dataset.type; // rock, paper or scissors from the data attribute
+        const playerChoice = e.target.dataset.type; // rock, paper or scissors from the data
         compMove(playerChoice);
     };
 
