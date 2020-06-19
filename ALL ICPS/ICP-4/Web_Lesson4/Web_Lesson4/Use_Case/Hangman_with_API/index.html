@@ -1,0 +1,29 @@
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>Hangman</title>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div id="container">
+    <div class="board">
+        <div class="hangman-word"></div>
+        <div class="remaining-guesses">
+            <span class="remaining">7</span> guesses left
+        </div>
+        <div class="console">
+            <input class="token" type="hidden"> </input>
+            <input class="letter" maxlength=1 type="text"> </input>
+            <button id="guess">Guess</button>
+        </div>
+        <div class="attempts"></div>
+        <button id="new-game">Start a new game</button>
+    </div>
+    <br/>
+</div>
+
+</body>
+</html>
+

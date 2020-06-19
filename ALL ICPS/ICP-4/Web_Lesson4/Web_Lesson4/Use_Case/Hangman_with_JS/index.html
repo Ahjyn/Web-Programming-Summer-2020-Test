@@ -1,0 +1,48 @@
+<html>
+<head>
+    <link href="hangman.css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+    <script src="hangman.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="hangm">
+
+    <div style="height: 2em; margin-bottom: 3em;">
+        <div class="h" id="hangm_end"></div>
+    </div>
+
+    <div id="hangm_animation">
+        <div class="h pole_h" id="hangm_2"></div>
+        <div class="h pole_v" id="hangm_1"></div>
+
+        <div class="h rope" id="hangm_3"></div>
+
+        <div class="h man_head" id="hangm_4"></div>
+        <div class="h man_upper" id="hangm_5"></div>
+        <div class="h man_lower" id="hangm_6"></div>
+    </div>
+
+    <div style="height: 2em;">
+        <div class="h" id="hangm_guesses"></div>
+    </div>
+
+    <form>
+        <div class="col-sm-3">
+            <button class="btn-lg btn-info" id="btn-start" onclick="Hangman.reset(); return false;" type="button">New
+                Game
+            </button>
+        </div>
+        <div class="h" id="hangm_guessbox" style="height: 8em;">
+            <div style="height: 4em;">
+                Guess the word:
+                <div id="hangm_word"></div>
+            </div>
+            <input id="guess" onkeyup="Hangman.guess(this.value); this.value=''; return false;" placeholder=""
+                   type="text">
+        </div>
+
+    </form>
+
+</div>
+</body>
+</html>
