@@ -13,18 +13,19 @@ function getGithubInfo(user) {
             {
                 var text = JSON.parse(xhttp.responseText);
 
+                giveUser(text);
                 console.log(text); // pass parameter response
-                showUser(text);
+
             }
-            else {
-                noSuchUser(username);
+            else {  //doesn't meet condition of if (both statements therein)
+                noUser(username);
             }
 
 
     };
 }
 
-function showUser(user) {
+function giveUser(user) {
     $("#link").append("<a href='"+user.html_url+"'>Link URL</a>");
     $("#profilePic").html("<img height='100' width='100' src='"+ user.avatar_url+"'/>");
     $("#name").text('Name of user : '+user.login);
@@ -33,7 +34,7 @@ function showUser(user) {
 
 }
 
-function noSuchUser(username) {
+function noUser(username) {
     alert("The user " + username + " is not available"); //concatenation of needed elements
 }
 
