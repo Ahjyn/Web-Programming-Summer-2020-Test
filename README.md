@@ -12,3 +12,4 @@ Each ICP should be broken down into their individual folder respectively.
 
 3.) ICP-3 focuse on the usage of JavaScript and applying it within the respective moudule in combination with prior class elements. 
 
+4.) ICP-4 focused on combining elements related to jquery and javascript. 
