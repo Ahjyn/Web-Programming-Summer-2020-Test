@@ -1,52 +1,57 @@
 function getGithubInfo(user) {
     //1. Create an instance of XMLHttpRequest class and send a GET request using it.
     // The function should finally return the object(it now contains the response!)
-    var xhttp = new XMLHttpRequest(); //create instant of request
-    xhttp.open('GET', "https://api.github.com/users/" + user, true);
-    xhttp.send();
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://api.github.com/users/');
+    xhr.send();
 
 
-    xhttp.onreadystatechange = function() {
-        //condition statement operations
+    xhr.onload = function() {
+        if(xhr.status == 200 && xhr.readyState == 4)
+        {
+            let text = JSON.parse(xhr.responseText);
 
-            if(xhttp.readyState == 4 && xhttp.status == 200)
-            {
-                var text = JSON.parse(xhttp.responseText);
+            showUser(text); //call showUser function
+            console.log(text); // pass parameter text to console out
 
-                giveUser(text);
-                console.log(text); // pass parameter response
-
-            }
-            else {  //doesn't meet condition of if (both statements therein)
-                noUser(username);
-            }
-
-
-    };
+        }
+        else {  //doesn't meet condition of if (both statements therein)
+            noSuchUser(username); //call noSuchUser function
+        }
+    }
 }
 
-function giveUser(user) {
-    $("#link").append("<a href='"+user.html_url+"'>Link URL</a>");
-    $("#profilePic").html("<img height='100' width='100' src='"+ user.avatar_url+"'/>");
-    $("#name").text('Name of user : '+user.login);
-    $("#Id").text('ID: '+user.id);
+function showUser(user) {
+
+    //2. set the contents of the h2 and the two div elements in the div '#profile' with the user content
 
 
 }
 
-function noUser(username) {
-    alert("The user " + username + " is not available"); //concatenation of needed elements
+function noSuchUser(username) {
+    //3. set the elements such that a suitable message is displayed
+    alert( username + " " + "cannot be processed. Please try again."); //concatenation of needed elements while passing username from call else
+
 }
 
 $(document).ready(function () {
     $(document).on('keypress', '#username', function (e) {
+        //check if the enter(i.e return) key is pressed
         if (e.which == 13) {
-            username = $(this).val(); // recalling this specific instance
+            //get what the user enters
+            username = $(this).val();
             //reset the text typed in the input
             $(this).val("");
             //get the user's information and store the respsonse
-            text = getGithubInfo(username);
-
+            response = getGithubInfo(username);
+            //if the response is successful show the user's details
+            if (response.status == 200) {
+                showUser(JSON.parse(response.responseText));
+                //else display suitable message
+            } else {
+                noSuchUser(username);
+            }
         }
     })
 });
