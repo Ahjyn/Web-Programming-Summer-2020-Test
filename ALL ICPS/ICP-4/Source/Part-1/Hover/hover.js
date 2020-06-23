@@ -1,3 +1,8 @@
+/****************************************************************************/
+/* Profile: SangJin Hyun                                                     */
+/* Assignment: ICP - 4 : Part1 - Hover                                      */
+/* File: js to instigate the hover portion of this assignment               */
+/****************************************************************************/
 function upDate(previewPic) {
     /* In this function you should
        1) change the url for the background image of the div with the id = "image"
