@@ -1,0 +1,17 @@
+.example-form {
+  min-width: 250px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.example-full-width:nth-last-child() {
+  margin-bottom: 10px;
+}
+
+.button-row {
+  margin: 15px ;
+}

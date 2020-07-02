@@ -1,0 +1,48 @@
+<div class="button-row">
+  <a mat-raised-button ="primary" [routerLink]="['/books']" >
+    <mat-icon>list</mat-icon>
+  </a>
+</div>
+<form [formGroup]="bookForm" (ngSubmit)="onFormSubmit(bookForm.value)">
+  <mat-form-field class="full-width-field">
+    <input matInput placeholder="ISBN" formControlName="isbn">
+    <mat-error>
+      <span *ngIf="!bookForm.get('isbn').valid && bookForm.get('isbn').touched"> ISBN Number</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width-field">
+    <input matInput placeholder="Title" formControlName="title">
+    <mat-error>
+      <span *ngIf="!bookForm.get('title').valid && bookForm.get('title').touched"> Book Title</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width-field">
+    <input matInput placeholder="Author" formControlName="author">
+    <mat-error>
+      <span *ngIf="!bookForm.get('author').valid && bookForm.get('author').touched"> Book Author</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width-field">
+    <textarea matInput placeholder="Description" formControlName="description"></textarea>
+    <mat-error>
+      <span *ngIf="!bookForm.get('description').valid && bookForm.get('description').touched">Book Description</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width-field">
+    <input matInput placeholder="Publisher" formControlName="publisher">
+    <mat-error>
+      <span *ngIf="!bookForm.get('publisher').valid && bookForm.get('publisher').touched">Enter Publisher</span>
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="full-width-field">
+    <input matInput placeholder="Published Year" formControlName="published_year">
+    <mat-error>
+      <span *ngIf="!bookForm.get('published_year').valid && bookForm.get('published_year').touched">Enter Published Year</span>
+    </mat-error>
+  </mat-form-field>
+  <div class="button-row">
+    <button type="submit" [disabled]="!bookForm.valid" mat-raised-button color="primary">
+      <mat-icon>save</mat-icon>
+    </button>
+  </div>
+</form>
