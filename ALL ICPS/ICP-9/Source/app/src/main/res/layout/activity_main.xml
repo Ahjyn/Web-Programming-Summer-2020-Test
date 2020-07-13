@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/pizza2"
+    >
+
+    <EditText
+        android:id="@+id/user_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="4dp"
+        android:ems="10"
+        android:hint="Name for order: "
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="142dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="44dp"
+        android:text="Extras"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_input"
+        android:layout_marginLeft="38dp" />
+
+    <CheckBox
+        android:id="@+id/cheese_pizza_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="32dp"
+        android:text="Cheese Pizza ($6)"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <CheckBox
+        android:id="@+id/extra_cheese_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="20dp"
+        android:text="Extra Cheese($2)"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cheese_pizza_checked" />
+
+    <CheckBox
+        android:id="@+id/green_peppers_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+        android:text="Green Pepper($2)"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/extra_cheese_checked" />
+
+    <CheckBox
+        android:id="@+id/italian_sausage_checked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+        android:text="Italian Sausage ($3)"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/green_peppers_checked" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="93dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="35dp"
+        android:text="Quantity"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/italian_sausage_checked"
+        android:layout_marginLeft="38dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="12dp"
+        android:onClick="decrement"
+        android:text="-"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/quantity_text_view"
+        android:layout_width="47dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="256dp"
+        android:text="0"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/cheese_pizza_checked" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="368dp"
+        android:onClick="increment"
+        android:text="+"
+        app:layout_constraintStart_toEndOf="@+id/quantity_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/user_input"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="12dp"
+        android:onClick="sendEmail"
+        android:text="ORDER"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="112dp"
+        android:layout_marginLeft="112dp"
+        android:layout_marginTop="12dp"
+        android:onClick="submitOrder"
+        android:text="Summary"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+</androidx.constraintlayout.widget.ConstraintLayout>
