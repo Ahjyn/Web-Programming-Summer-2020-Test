@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ALL ICPS.iml" filepath="$PROJECT_DIR$/.idea/ALL ICPS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ICP-9.iml" filepath="$PROJECT_DIR$/.idea/modules/ICP-9.iml" group="ICP-9" />
     </modules>
   </component>
 </project>
