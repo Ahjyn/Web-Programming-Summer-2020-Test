@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "947996366787",
+    "firebase_url": "https://summer2020-c2bed.firebaseio.com",
+    "project_id": "summer2020-c2bed",
+    "storage_bucket": "summer2020-c2bed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:947996366787:android:1bbd56a3161199bfdb8f76",
+        "android_client_info": {
+          "package_name": "com.vijaya.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "947996366787-pi51fglnbdagk81lrlhjvcu1204ktped.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbVfbXcZ55oWdKvtDSqDLaFSGZhqVA5Ls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "947996366787-pi51fglnbdagk81lrlhjvcu1204ktped.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
